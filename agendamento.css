@@ -20,6 +20,10 @@ header {
     overflow: hidden;
 }
 
+header > a {
+    margin-top: 8px;
+}
+
 header::before {
     content: "";
     position: absolute;
@@ -104,7 +108,7 @@ h2 {
     flex-direction: column;
 }
 
-button {
+.publish {
     width: 50px;
     height: 50px;
     background: linear-gradient(135deg, #ffffff 0%, #dfe5d1 100%);
@@ -127,9 +131,62 @@ button {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-button:hover {
+.publish:hover {
     transform: translateX(-50%) scale(1.08);
     box-shadow: 0 10px 22px rgba(85, 89, 52, 0.5), 0 0 20px rgba(255,255,255,0.6);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 23, 18, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+
+#formAgendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#formAgendamento textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.botoes-modal {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-cancelar,
+.btn-publicar {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-cancelar {
+    background: #e4e7e3;
+    color: #2d3225;
+}
+
+.btn-publicar {
+    background: linear-gradient(135deg, #555934 0%, #7a7f4f 100%);
+    color: white;
 }
 
 
@@ -254,5 +311,10 @@ header {
 
 ::selection{
     background: rgba(85, 89, 52, 0.25);
+    color: #1d240f;
+}
+
+
+.publish{
     color: #1d240f;
 }

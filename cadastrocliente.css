@@ -3,9 +3,9 @@ body {
     background: linear-gradient(135deg, #0d1f4d 0%, #122d73 30%, #0a1534 65%, #040b19 100%);
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     animation: scenePulse 8s ease-in-out infinite alternate;
@@ -96,7 +96,7 @@ h1 {
 }
 
 header a {
-    position: absolute;
+    margin-top: 30px;
     left: 20px;
     top: 52px;
     text-decoration: none;
@@ -104,16 +104,23 @@ header a {
     font-size: 1.5rem;
 }
 
-div {
+.conteudo-cadastro {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-right: 0;
-    order: 2;
-    width: 40%;
+    gap: 42px;
+    width: min(1100px, 90vw);
+    margin-top: 10px;
+    padding: 10px 0 30px;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
     min-height: 500px;
-    transform: translateY(15px);
+    transform: translateY(-8px);
     animation: entradaImagem 1s cubic-bezier(0.22, 1, 0.36, 1) both;
     position: relative;
 }
@@ -160,6 +167,9 @@ img {
     z-index: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     filter: saturate(1.15);
+    width: min(420px, 100%);
+    max-width: 100%;
+    margin-top: 0;
 }
 
 img {
@@ -178,9 +188,8 @@ form {
     color: black;
     font-weight: 500;
     background: linear-gradient(180deg, #f7fbff 0%, #dfeaf6 100%);
-    padding-bottom: 30px;
-    width: 40%;
-    margin-top: 270px;
+    width: 46%;
+    margin-top: 0;
     padding: 30px;
     border-radius: 40px;
     display: flex;
@@ -235,7 +244,7 @@ form:hover {
 
 input {
     width: 100%;
-    max-width: 40vh;
+    max-width: 420px;
     box-sizing: border-box;
     margin-bottom: 12px;
     border-radius: 30px;
@@ -255,9 +264,10 @@ label {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 40vh;
+    max-width: 420px;
     margin-bottom: 6px;
     letter-spacing: 0.4px;
+    text-align: center;
 }
 
 button {
