@@ -1,0 +1,28 @@
+body{
+    background-color: blanchedalmond;
+    margin: 0;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    padding: 15px;
+    border-radius: 30px;
+}
+
+a{
+    text-decoration: none;
+}
